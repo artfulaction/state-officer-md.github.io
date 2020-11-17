@@ -8,32 +8,35 @@ This repository is for the design system code itself. We maintain [another repos
 
 ## Contents
 
-- [Background](#background)
-- [Recent updates](#recent-updates)
-- [Getting started](#getting-started)
-- [Using the design system](#using-the-design-system)
-  - [Download](#download)
-  - [Install using `npm`](#install-using-npm)
-    - [Using the USWDS package](#using-the-uswds-package)
-    - [Sass and theme settings](#sass-and-theme-settings)
-    - [Sass compilation requirements](#sass-compilation-requirements)
-    - [JavaScript](#javascript)
-  - [Use another framework or package manager](#use-another-framework-or-package-manager)
-- [CSS architecture](#css-architecture)
-- [JS customization](#js-customization)
-- [Customization, theming, and tokens](#customization-theming-and-tokens)
-  - [Using tokens in theme settings](#using-tokens-in-theme-settings)
-  - [Set the base asset paths (fonts and images)](#set-the-base-asset-paths-fonts-and-images)
-  - [Main variables that can be customized](#main-variables-that-can-be-customized)
-- [Where things live](#where-things-live)
-- [Browser support](#browser-support)
-- [Accessibility](#accessibility)
-- [Fractal](#fractal)
-  - [Template compatibility](#template-compatibility)
-- [Need installation help?](#need-installation-help)
-- [Contributing to the code base](#contributing-to-the-code-base)
-- [Reuse of open-source style guides](#reuse-of-open-source-style-guides)
-- [Licenses and attribution](#licenses-and-attribution)
+- [United States Web Design System](#united-states-web-design-system)
+  - [Contents](#contents)
+  - [Background](#background)
+  - [Recent updates](#recent-updates)
+  - [Getting started](#getting-started)
+  - [Using the design system](#using-the-design-system)
+    - [Download](#download)
+    - [Install using npm](#install-using-npm)
+      - [Using the USWDS package](#using-the-uswds-package)
+      - [Sass and theme settings](#sass-and-theme-settings)
+      - [Sass compilation requirements](#sass-compilation-requirements)
+      - [JavaScript](#javascript)
+    - [Use another framework or package manager](#use-another-framework-or-package-manager)
+  - [CSS architecture](#css-architecture)
+  - [JS customization](#js-customization)
+  - [Customization, theming, and tokens](#customization-theming-and-tokens)
+    - [Using tokens in theme settings](#using-tokens-in-theme-settings)
+    - [Set the base asset paths (fonts and images)](#set-the-base-asset-paths-fonts-and-images)
+  - [Where things live](#where-things-live)
+  - [Browser support](#browser-support)
+  - [Accessibility](#accessibility)
+  - [Fractal](#fractal)
+    - [Template compatibility](#template-compatibility)
+  - [Long-term support of v1.x](#long-term-support-of-v1x)
+  - [Need installation help?](#need-installation-help)
+  - [Contributing to the code base](#contributing-to-the-code-base)
+  - [Reuse of open-source style guides](#reuse-of-open-source-style-guides)
+  - [Licenses and attribution](#licenses-and-attribution)
+  - [Contributing](#contributing)
 
 ## Background
 
@@ -382,7 +385,7 @@ npm run watch
 
 ### Template compatibility
 
-Many of our Fractal view templates are compatible with [Nunjucks](https://mozilla.github.io/nunjucks/) (for JavaScript/Node), [Jinja](http://jinja.pocoo.org/docs/2.9/) (Python), and [Twig](https://twig.sensiolabs.org/) (PHP) out of the box. Components that reference other components use a Fractal-specific `{% render %}` tag that will either need to be implemented in other environments or replaced with the appropriate `{% include %}` tags.
+Many of our Fractal view templates are compatible with [Nunjucks](https://mozilla.github.io/nunjucks/) (for JavaScript/Node), [Jinja](http://jinja.pocoo.org/docs/2.9/) (Python), and [Twig](https://twig.sensiolabs.org/) (PHP) out of the box. Components that reference other components use a Fractal-specific <code>{% raw %}{% render %}{% endraw %}</code> tag that will either need to be implemented in other environments or replaced with the appropriate <code>{% raw %}{% include %}{% endraw %}</code> tags.
 
 ## Long-term support of v1.x
 
