@@ -1,12 +1,6 @@
 ---
 layout: widepage
 title: Kickoff
-course: 1
-lesson: 0
-indicator: admin
-priority: high
-visible: true
-date: October 8, 2020
 dimension: ko1
 ---
 

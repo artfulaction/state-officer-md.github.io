@@ -26,30 +26,55 @@
         {% if lesson == 0 %}
             {% for p in site.courses %}
                 {% if p.dimension == id %}
+                    <!-- found {{ id }} -->
                     {% assign lesson = p %}
                 {% endif %}
             {% endfor %}
         {% endif %}
         {% if lesson != 0 %}
-            {% if lesson.indicator == "admin" %}
+            {% if lesson.path contains "course" %}
+                <!-- is a course {{ id }} -->
+                {% assign is_course = true %}
                 {% assign color = "#aaaaaa" %}
             {% else %}
+                {% assign is_course = false %}
                 {% assign color="#1d3557" %}
             {% endif %}
             {% comment %} Find all the courses that match this id {% endcomment %}
-            {% for lesson in site.rubric %}
-                {% if lesson.dimension == id %}
-                    <tr>
-                        <td>
-                            <span class="courseslug" style="background: {{ color }};">{% include indicator slug=lesson.id %}</span> 
-                        </td>
-                        <td> 
-                            <a href="{{ lesson.url | prepend: site.baseurl }}">{% if lesson.indicator != "admin" %}Lesson {{ lesson_counter }} - {% endif %}{{ lesson.title }}</a>
-                        </td>
-                    </tr>
-                    {% assign lesson_counter = lesson_counter | plus: 1 %}
-                {% endif %}
-            {% endfor %}
+            {% if is_course %}
+                <tr>
+                    <td>
+                        <span class="courseslug" style="background: {{ color }};">
+                            {% include indicator slug="admin" %}
+                        </span> 
+                    </td>
+                    <td> 
+                        <a href="{{ lesson.url | prepend: site.baseurl }}">
+                            {{ lesson.title }}
+                        </a>
+                    </td>
+                </tr>
+            {% else %}
+                {% for lesson in site.rubric %}
+                    {% if lesson.dimension == id %}
+                        <tr>
+                            <td>
+                                <span class="courseslug" style="background: {{ color }};">
+                                    {% include indicator slug=lesson.id %}
+                                </span> 
+                            </td>
+                            <td> 
+                                <a href="{{ lesson.url | prepend: site.baseurl }}">
+                                    {% if lesson.indicator != "admin" %}
+                                        Lesson {{ lesson_counter }} - 
+                                    {% endif %}{{ lesson.title }}
+                                </a>
+                            </td>
+                        </tr>
+                        {% assign lesson_counter = lesson_counter | plus: 1 %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %} {% comment %} is_course {% endcomment %}
         {% endif %}
     {% endfor %}
     </table>
