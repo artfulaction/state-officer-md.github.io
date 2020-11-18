@@ -2,7 +2,7 @@
 title: README
 ---
 
-# {{ page.title }}
+# README
 
 This course is being developed in conjunction with colleagues at the Centers for Medicare and Medicaid Services. The goal of this course is to support State Officers in tracking project health on an on-going basis. We do this by supporting SOs in asking questions in four broad categories:
 
