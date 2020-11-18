@@ -1,7 +1,3 @@
----
-title: Care and Feeding
----
-
 The State Officer, M.D. (SOMD) site will need some care and feeding over time. This document captures the likely process that ongoing maintenance and development will entail.
 
 # Editing - Remote or Local?
