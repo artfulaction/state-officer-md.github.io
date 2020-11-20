@@ -185,6 +185,20 @@ videos:
         duration: 7m36s
         note: |
           Web accessibility: essential for some, useful for all.
+      - title: What is SQL? (in 4 minutes, for beginners)
+        uid: wisql
+        url: https://www.youtube.com/watch?v=27axs9dO7AE
+        author: Danielle Thé
+        duration: 4m25s
+        note: |
+          From the author: Structured Query Language - or SQL, is a language that communicates with databases. Learn what SQL is, and why it is an important language to learn in the era of big data. 
+      - title: Data Migration Testing Tutorial
+        uid: dmtt
+        url: https://www.youtube.com/watch?v=cmiJm-_GdVA
+        author: Interesting Data
+        duration: 12m57s
+        note: |
+          A somewhat detailed discussion of things to consider when migrating data. 
 
 slidedecks:
   header: Slide Decks

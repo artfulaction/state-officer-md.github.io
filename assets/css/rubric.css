@@ -67,3 +67,11 @@
     width: 50%;
 
 }
+
+.arrow {
+    border-right: 10px solid; 
+    border-bottom: 10px solid;
+    height: 20px;
+    width: 20px;
+    transform: rotate(-45deg);
+}
