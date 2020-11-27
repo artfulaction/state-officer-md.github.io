@@ -2,7 +2,9 @@ The State Officer, M.D. (SOMD) site will need some care and feeding over time. T
 
 # Editing - Remote or Local?
 
-You can work on this content remotely (or, directly on the site), or you can work locally.
+You can work on this content remotely or you can work locally.
+* Working remotely means that you edit the content directly online. 
+* Working locally means that you edit a version of the content on your computer, then later "save" it to the site..
 
 ## Working Remotely
 
@@ -123,7 +125,7 @@ Includes are a way of defining text/HTML/code once, and then re-using it through
 * `indicator` is used in the course content overview.
 * `link` is used to reach into `resources.yaml` and extract links. This is used everywhere. Change cautiously.
 * `resources` is used to render out sections of the resources page.
-* `rubric` renders out a dimension from the rubric itself, given a designator.
+* `rubric` renders out a dimension from the rubric itself, given a designator. You'll find the designator from `rubric.yaml` file that lives in _data
 
 Changing any of these will change content all over the site. Be careful when doing so.
 
@@ -141,8 +143,9 @@ All images, CSS, Javascript, and the like live here.
 
 There are three Jekyll collections in this site, currently. 
 
-* `_courses` are where course one, two, three, etc. are defined. These have almost no "content" in them... because they reference out to the rubric lessons. They provide the structure of a course, but not the content itself.
-* `_rubric` is where there are lessons supporting the rubric. Each dimension has one or more lessons associated with it. Those lessons are then woven together to form courses.
+* `_courses` are structured folders that hold individual course overview pages. They structure of a course and link out to the lesson pages. *You'll find the overview.md pages for the course descriptions in these folders. These consist of a short description and a link to the lesson pages.*
+* `_rubric` is where there are lessons supporting the rubric. Each dimension of the rubric has one or more lessons associated with it. Those lessons are then woven together to form courses.
+    *This is where you'll save new markdown files to add lessons*
 * `_pages` are other static pages on the site. For example, the Joel Test content and Agile practices overview are both examples of static pages.
 
 ## .gitignore
